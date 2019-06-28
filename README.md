@@ -9,7 +9,7 @@
 * `dist/`: distribution files for all operating systems
 * `public/`: react builded frontend (react `build/` folder)
 * `resources/`: static files used for build process
-  * `icon.png`: app icon
+    * `icon.png`: app icon
 * `src/`: electron backend javascript code
 
 ## Available scripts
