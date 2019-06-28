@@ -28,7 +28,7 @@ The frontend `react-scripts` development server must be running to serve the app
 ### `npm run dist`
 
 Generates the executable files for running the app in all operating systems.<br>
-The file will be placed in `dist/` folder.<br>
+Executable files will be placed in `dist/` folder.<br>
 The frontend code must be copied to `public/` folder.
 
 
