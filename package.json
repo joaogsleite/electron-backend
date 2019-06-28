@@ -1,0 +1,48 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "Example electron app",
+  "main": "./build/index.js",
+  "homepage": "http://localhost",
+  "scripts": {
+    "clean": "rm -rf build/ dist/",
+    "pretranspile": "npm run clean",
+    "transpile": "babel src/ -d build/ --extensions \".js,.ts,.tsx\" --source-maps inline",
+    "prestart": "npm run transpile",
+    "start": "electron build/",
+    "predev": "npm run transpile",
+    "dev": "NODE_ENV=development electron build/",
+    "predist": "npm run transpile",
+    "dist": "electron-builder --linux deb --win --mac",
+    "predist:win": "npm run predist",
+    "dist:win": "docker run --rm -it -v $PWD:/project electronuserland/builder:wine npm run dist:_win",
+    "dist:_win": "electron-builder --win --ia32",
+    "postdist:_win": "chmod -R 777 dist/",
+    "predist:mac": "npm run predist",
+    "dist:mac": "electron-builder --mac",
+    "predist:linux": "npm run predist",
+    "dist:linux": "electron-builder --linux deb",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "directories": {
+      "buildResources": "resources/",
+      "output": "dist/"
+    },
+    "files": ["build/", "public/", "resources/"],
+    "appId": "com.example.myapp"
+  },
+  "author": {
+    "name": "João Leite",
+    "email": "joao.leite@isobar.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "electron": "^5.0.6",
+    "electron-builder": "^20.44.4"
+  }
+}
