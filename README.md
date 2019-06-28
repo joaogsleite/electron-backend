@@ -8,7 +8,8 @@
 * `build/`: babel transpiled code
 * `dist/`: distribution files for all operating systems
 * `public/`: react builded frontend (react `build/` folder)
-* `resources/`: app icon and static files
+* `resources/`: static files used for build process
+  * `icon.png`: app icon
 * `src/`: electron backend javascript code
 
 ## Available scripts
