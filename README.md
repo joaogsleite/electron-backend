@@ -61,7 +61,9 @@ Removes `build/` and `dist/` folders
 ## Routing
 
 This project includes an IPC routing system like the Express Router.<br>
-The file `utils/ipc` includes **IpcRouter** and **IpcMainRouter**:
+The file `src/utils/ipc.js` includes **IpcRouter** and **IpcMainRouter**.<br>
+
+### Example usage:
 
 ```javascript
 const exampleRouter = new IpcRouter()
