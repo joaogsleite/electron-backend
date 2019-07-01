@@ -1,5 +1,5 @@
 {
-  "name": "electron-app",
+  "name": "electron-backend",
   "version": "1.0.0",
   "description": "Example electron app",
   "main": "./build/index.js",
@@ -30,7 +30,13 @@
       "output": "dist/"
     },
     "files": ["build/", "public/", "resources/"],
-    "appId": "com.example.myapp"
+    "appId": "com.example.myapp",
+    "win": {
+      "target": ["portable"]
+    },
+    "portable": {
+      "artifactName": "electron-app.exe"
+    }
   },
   "author": {
     "name": "João Leite",
