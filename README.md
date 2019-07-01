@@ -23,7 +23,7 @@ The frontend code must be copied to `public/` folder.
 ### `npm run dev`
 
 Runs the app in the development mode.<br>
-The frontend `react-scripts` development server must be running to serve the app frontend. 
+A frontend development server must be running to serve the app html. 
 
 
 ### `npm run dist`
