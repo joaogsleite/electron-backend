@@ -2,6 +2,10 @@
 
 # Electron backend
 
+Electron app backend boilerplate.<br>
+This project does not include a tooling system for the frontend (that should be copied to `/public` folder).<br>
+You can check [this project](https://github.com/joaogsleite/electron-frontend) for an example frontend boilerplate for the electron app.
+
 
 ## Folder structure
 
