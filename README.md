@@ -50,4 +50,4 @@ Generates the `deb` file for installing the app in Debian-based linux.
 
 ### `npm run clean`
 
-Cleans the `build/` and `dist/` folders
+Removes `build/` and `dist/` folders
