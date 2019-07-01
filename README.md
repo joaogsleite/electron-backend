@@ -58,7 +58,7 @@ Removes `build/` and `dist/` folders
 
 
 
-### Routing
+## Routing
 
 This project includes an IPC routing system like the Express Router.<br>
 `utils/ipc` includes **IpcRouter** and **IpcMainRouter**:
