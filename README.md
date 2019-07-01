@@ -75,4 +75,4 @@ const mainRouer = new IpcMainRouter()
 mainRouter.on('/example', exampleRouter)
 ```
 
-> **helloController** will be available at `example/hello`
+> **helloController** will be available at `/example/hello`
