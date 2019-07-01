@@ -1,4 +1,9 @@
 
 export function sayHello (name) {
-  return `Hello ${name}, I am the backend.`
+  const msg = `Hello ${name}, I am the backend.`
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(msg)
+    }, 500)
+  })
 }

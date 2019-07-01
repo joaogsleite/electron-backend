@@ -1,9 +1,10 @@
 
-import { ipcMain } from 'electron'
+import { IpcRouter } from 'utils/ipc'
 
 import { sayHello } from 'controllers/hello'
 
-ipcMain.on('say-hello', (event, name) => {
-  const result = sayHello(name)
-  event.reply('say-hello-response', result)
-})
+const router = new IpcRouter()
+
+router.on('/say', sayHello)
+
+export default router
