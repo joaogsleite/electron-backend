@@ -55,3 +55,22 @@ Generates the `deb` file for installing the app in Debian-based linux.
 ### `npm run clean`
 
 Removes `build/` and `dist/` folders
+
+
+
+### Routing
+
+This project includes an IPC routing system like the Express Router.<br>
+`utils/ipc` includes **IpcRouter** and **IpcMainRouter**:
+
+```javascript
+const exampleRouter = new IpcRouter()
+exampleRouter.on('/hello', helloController)
+```
+
+```javascript
+const mainRouer = new IpcMainRouter()
+mainRouter.on('/example', exampleRouter)
+```
+
+> **helloController** will be available at `example/hello`
