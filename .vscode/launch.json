@@ -8,7 +8,10 @@
       "cwd": "${workspaceRoot}",
       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
       "runtimeVersion": "12.5.0",
-      "args" : ["."],
+      "runtimeArgs": [
+        "--remote-debugging-port=9223",
+        "."
+      ],
       "outputCapture": "std",
       "env": {
         "NODE_ENV": "development"
