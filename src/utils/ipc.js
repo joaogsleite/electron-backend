@@ -22,10 +22,10 @@ export class IpcRouter {
 }
 
 export class IpcMainRouter extends IpcRouter {
-  handle (routeName, func) {
-    return (event, args) => {
+  handle (func) {
+    return (event, {args, requestId}) => {
       func(args).then((result) => {
-        event.reply(routeName + '-response', result)
+        event.reply(requestId, result)
       })
     }
   }
@@ -37,7 +37,7 @@ export class IpcMainRouter extends IpcRouter {
       routes.forEach((route) => {
         const routeName = name + route.name
         const routeHandler = route.handler
-        ipcMain.on(routeName, this.handle(routeName, routeHandler))
+        ipcMain.on(routeName, this.handle(routeHandler))
       })
     }
   }
